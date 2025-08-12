@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>利用規約への同意と情報入力</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 0 20px;
+            background-color: #f9f9f9;
+        }
+        h1, h2 {
+            border-bottom: 2px solid #5c3b8c; /* テーマカラーを少し変更 */
+            padding-bottom: 10px;
+            color: #333;
+        }
+        .terms-box {
+            height: 300px; /* 少し高さを調整 */
+            overflow-y: scroll;
+            border: 1px solid #ccc;
+            padding: 15px 25px;
+            margin-bottom: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+        }
+        .terms-box h3 {
+            font-size: 1.1em;
+            margin-top: 1.5em;
+            margin-bottom: 0.5em;
+        }
+        .terms-box p {
+            margin-top: 0;
+            text-indent: 1em; /* 字下げ */
+        }
+        .agreement-section {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 30px;
+        }
+        #agreement {
+            width: 18px;
+            height: 18px;
+        }
+        #user-form {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="number"] {
+            width: calc(100% - 22px); /* paddingを考慮 */
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+        .name-group {
+            display: flex;
+            flex-wrap: wrap; /* スマホ表示で折り返すように */
+            gap: 10px;
+        }
+        .name-group .form-group {
+            flex: 1;
+            min-width: 120px; /* 最小幅を指定 */
+        }
+        button {
+            width: 100%;
+            padding: 12px;
+            background-color: #6a4c9c; /* テーマカラー */
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #5c3b8c;
+        }
+        button:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+        #message {
+            margin-top: 20px;
+            padding: 15px;
+            border-radius: 5px;
+            text-align: center;
+            font-weight: bold;
+            display: none; /* 初期状態は非表示 */
+        }
+        .success {
+            background-color: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+        .error {
+            background-color: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+        .copyright {
+            text-align: right;
+            margin-top: 1em;
+            font-size: 0.9em;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>NAZUNA ENGEKI 5th Anniversary 動画公開サイト</h1>
+
+    <div class="terms-box" id="terms-container">
+        <h2>利用規約</h2>
+        
+        <h3>第1条（総則・適用範囲）</h3>
+        <p>本規約は、「NAZUNA ENGEKI 5th Anniversary 動画公開サイト」プロジェクト（以下「本プロジェクト」といいます）に関連する企画書、仕様書、設計書、ソースコード、デザイン、画像、動画、テキストその他一切の制作物および関連資料（以下、総称して「本件著作物」といいます）の取り扱いについて定めるものです。</p>
+        <p>本プロジェクトに関わるすべての関係者および本件著作物を閲覧または利用するすべての者（以下「利用者」といいます）は、本規約を遵守するものとします。</p>
+
+        <h3>第2条（権利の帰属）</h3>
+        <p>本件著作物に関する著作権（著作権法第27条および第28条に定める権利を含みます）、商標権、その他一切の知的財産権は、すべて著作権者である金駿翔 (J.J.X.)（以下「権利者」といいます）に原始的に帰属します。</p>
+
+        <h3>第3条（利用の制限）</h3>
+        <p>利用者は、権利者による事前の書面承諾なく、本件著作物のいかなる部分も使用（複製、上演、上映、公衆送信、口述、展示、頒布、譲渡、貸与、翻訳、翻案、二次的著作物の作成その他一切の利用行為を含みます）することはできません。</p>
+        <p>本件著作物の利用に関する許諾は、すべて権利者の完全な裁量により決定され、権利者が指定する監督下で行われるものとします。</p>
+
+        <h3>第4条（規約への同意）</h3>
+        <p>利用者が、本プロジェクトの企画書を閲覧し、または本件著作物にアクセスした時点で、本規約の内容をすべて理解し、これに拘束されることに同意したものとみなします。同意しない利用者は、本件著作物を直ちに破棄し、アクセスを中止しなければなりません。</p>
+        
+        <h3>第5条（保証の否認および免責）</h3>
+        <p>権利者は、本件著作物が利用者の特定の目的に適合すること、期待する機能・商品的価値・正確性・有用性を有すること、利用者による本件著作物の利用が利用者に適用のある法令または業界団体の内部規則等に適合すること、および不具合が生じないことについて、何ら保証するものではありません。</p>
+        <p>権利者は、本件著作物の利用に起因して利用者に生じたあらゆる損害について一切の責任を負いません。</p>
+
+        <h3>第6条（準拠法および管轄裁判所）</h3>
+        <p>本規約の準拠法は日本法とし、本規約に起因し、または関連する一切の紛争については、東京地方裁判所を第一審の専属的合意管轄裁判所とします。</p>
+        
+        <p class="copyright">以上</p>
+        <p class="copyright">制定日: 2025年8月12日<br>著作権者: 金駿翔 (J.J.X.)</p>
+    </div>
+
+    <div class="agreement-section">
+        <input type="checkbox" id="agreement">
+        <label for="agreement">上記の利用規約に同意します。</label>
+    </div>
+
+    <div id="user-form" style="display: none;">
+        <h2>情報入力フォーム</h2>
+        <form id="info-form">
+            <div class="name-group">
+                <div class="form-group">
+                    <label for="grade">年</label>
+                    <input type="number" id="grade" name="grade" required placeholder="例: 3">
+                </div>
+                <div class="form-group">
+                    <label for="class">組</label>
+                    <input type="text" id="class" name="class" required placeholder="例: A">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="name">名前</label>
+                <input type="text" id="name" name="name" required placeholder="例: 鈴木 一郎">
+            </div>
+            <div class="form-group">
+                <label for="email">メールアドレス</label>
+                <input type="email" id="email" name="email" required placeholder="例: your-email@example.com">
+            </div>
+            <button type="submit" id="submit-button">同意して送信する</button>
+        </form>
+        <div id="message"></div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const agreementCheckbox = document.getElementById('agreement');
+            const userForm = document.getElementById('user-form');
+            const infoForm = document.getElementById('info-form');
+            const submitButton = document.getElementById('submit-button');
+            const messageDiv = document.getElementById('message');
+            
+            // ★ Google Apps Script の WebアプリURLをここに貼り付けます
+            const GAS_URL = 'https://script.google.com/macros/s/AKfycbxpUM-wR7lSPVEWza3WBOHJD8tX902sPNFW8aXGuWyGOss2vPz7qDnvvky6vffmiKjGxQ/exec';
+
+            agreementCheckbox.addEventListener('change', () => {
+                if (agreementCheckbox.checked) {
+                    userForm.style.display = 'block';
+                } else {
+                    userForm.style.display = 'none';
+                }
+            });
+
+            infoForm.addEventListener('submit', (e) => {
+                e.preventDefault(); // デフォルトのフォーム送信をキャンセル
+
+                // ボタンを無効化し、テキストを変更
+                submitButton.disabled = true;
+                submitButton.textContent = '送信中...';
+                messageDiv.style.display = 'none';
+
+                const formData = new FormData(infoForm);
+                const data = {
+                    grade: formData.get('grade'),
+                    class: formData.get('class'),
+                    name: formData.get('name'),
+                    email: formData.get('email'),
+                    agreedAt: new Date().toLocaleString('ja-JP')
+                };
+
+                fetch(GAS_URL, {
+                    method: 'POST',
+                    mode: 'no-cors', // CORSエラーを回避するため 'no-cors' を使用
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(data)
+                })
+                .then(response => {
+                    // no-corsモードではレスポンス内容を読めないため、成功したと見なす
+                    infoForm.reset();
+                    agreementCheckbox.checked = false;
+                    userForm.style.display = 'none';
+                    
+                    messageDiv.textContent = '送信が完了しました。';
+                    messageDiv.className = 'success';
+                    messageDiv.style.display = 'block';
+                })
+                .catch(error => {
+                    // ネットワークエラーなど
+                    messageDiv.textContent = '送信に失敗しました。時間をおいて再度お試しください。';
+                    messageDiv.className = 'error';
+                    messageDiv.style.display = 'block';
+                    console.error('Error:', error);
+                })
+                .finally(() => {
+                    // ボタンを元に戻す
+                    submitButton.disabled = false;
+                    submitButton.textContent = '同意して送信する';
+                });
+            });
+        });
+    </script>
+</body>
+</html>
